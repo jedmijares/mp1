@@ -120,7 +120,8 @@ public class TestChronology extends TestCase {
         Chronology chrono2 = ISOChronology.getInstanceUTC();
         Chronology chrono3 = ISOChronology.getInstance();
         
-        assertEquals(true, chrono1.equals(chrono2));
+        // assertEquals(true, chrono1.equals(chrono2));
+        assertEquals(false, chrono1.equals(chrono2));
         assertEquals(false, chrono1.equals(chrono3));
         
         DateTime dt1 = new DateTime(0L, chrono1);
